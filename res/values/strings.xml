@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Tic Tac Toe</string>
+
+    <string name="category_three_square_game">ThreeSquareGame</string>
+
+    <string name="category_five_square_game">FiveSquareGame</string>
+
+</resources>

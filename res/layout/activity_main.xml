@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Inflate the first screen layout with Relative layout parent view-->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.tictactoe.MainActivity">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/player_one_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Player 1 Name"
+            android:gravity="center_horizontal"
+            android:inputType="textCapWords"/>
+
+        <EditText
+            android:id="@+id/player_two_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Player 2 Name"
+            android:gravity="center_horizontal"
+            android:inputType="textCapWords"/>
+
+        </LinearLayout>
+
+        <!--Create 2 button radio group to determine board game size-->
+        <RadioGroup
+            android:id="@+id/choose_board_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+            android:onClick="chooseBoardSizeRadioGroup">
+            <!--Radio button for 3 by 3 board game-->
+            <RadioButton
+                android:id="@+id/three_board_game"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="3 by 3"
+                android:onClick="chooseBoardGameRButtonClicked"/>
+            <!--Radio button for 5 by 5 board game-->
+            <RadioButton
+                android:id="@+id/five_board_game"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="5 by 5"
+                android:onClick="chooseBoardGameRButtonClicked"/>
+
+        </RadioGroup>
+
+
+    <!--Play button to determine all options for game
+    and to proceed to game play-->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/play_button"
+        android:text="play"
+        android:onClick="playGame"/>
+
+</RelativeLayout>
