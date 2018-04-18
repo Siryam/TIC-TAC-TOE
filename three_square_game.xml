@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Inflate the three_square_game layout with Linear layout parent view-->
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp">
+
+    <!--Linear layout containing 2 image views-->
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--First player image view-->
+        <ImageView
+
+            android:id="@+id/p1_image"
+            android:src="@drawable/player_x_icon"
+            style="@style/ImageView"/>
+
+        <!--Second player image view-->
+        <ImageView
+
+            android:id="@+id/p2_image"
+            android:src="@drawable/player_o_icon"
+            style="@style/ImageView"/>
+
+    </LinearLayout>
+
+    <!--Linear layout containing Player 1 and 2 textviews-->
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--First player Name text view-->
+        <TextView
+
+            android:id="@+id/p1_name"
+            android:text=""
+            style="@style/TextView1"/>
+
+        <!--Second player Name text view-->
+        <TextView
+
+            android:id="@+id/p2_name"
+            android:text=""
+            style="@style/TextView1"/>
+
+    </LinearLayout>
+
+    <!--Linear layout containing score details-->
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--Player 1 score-->
+        <TextView
+
+            android:id="@+id/p1_score"
+            android:text="0"
+            style="@style/TextView1"/>
+
+        <!--Player 2 score-->
+        <TextView
+
+            android:id="@+id/p2_score"
+            android:text="0"
+            style="@style/TextView1"/>
+
+    </LinearLayout>
+
+    <!--Text view containing game score/score winner details-->
+    <TextView
+
+        android:id="@+id/score_winner"
+        android:text=""
+        style="@style/TextView2"/>
+
+    <!--Text view containing player turn/game score details-->
+    <TextView
+
+        android:id="@+id/score_details"
+        android:text=""
+        style="@style/TextView2"/>
+
+    <!--Table layout containing all 9 buttons-->
+    <TableLayout
+
+        android:id="@+id/three_board"
+        style="@style/TableLayout">
+
+        <!--Table row with button b1, b2 and b3-->
+        <TableRow>
+
+            <!--Button b1-->
+            <Button
+                android:id="@+id/b1"
+                android:text=""
+                style="@style/ThreeSquareGameButton" />
+
+            <!--Button b2-->
+            <Button
+                android:id="@+id/b2"
+                android:text=""
+                style="@style/ThreeSquareGameButton"/>
+
+            <!--Button b3-->
+            <Button
+                android:id="@+id/b3"
+                android:text=""
+                style="@style/ThreeSquareGameButton"/>
+
+        </TableRow>
+        <!--Table row with button b4, b5 and b6-->
+        <TableRow>
+
+            <!--Button b4-->
+            <Button
+                android:id="@+id/b4"
+                android:text=""
+                style="@style/ThreeSquareGameButton"/>
+
+            <!--Button b5-->
+            <Button
+                android:id="@+id/b5"
+                android:text=""
+                style="@style/ThreeSquareGameButton"/>
+
+            <!--Button b6-->
+            <Button
+                android:id="@+id/b6"
+                android:text=""
+                style="@style/ThreeSquareGameButton"/>
+
+        </TableRow>
+        <!--Table row with button b7, b8 and b9-->
+        <TableRow>
+
+            <!--Button b7-->
+            <Button
+                android:id="@+id/b7"
+                android:text=""
+                style="@style/ThreeSquareGameButton"/>
+
+            <!--Button b8-->
+            <Button
+                android:id="@+id/b8"
+                android:text=""
+                style="@style/ThreeSquareGameButton"/>
+
+            <!--Button b9-->
+            <Button
+                android:id="@+id/b9"
+                android:text=""
+                style="@style/ThreeSquareGameButton"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+    <!--Reset Button-->
+    <Button
+
+        android:id="@+id/reset_button"
+        style="@style/ResetButton"
+        android:text="reset"
+        android:onClick="resetButton"/>
+
+</LinearLayout>

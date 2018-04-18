@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Inflate the first screen layout with Relative layout parent view-->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context="com.example.android.tictactoe.MainActivity">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/player_one_et"
+            android:hint="Player 1 Name"
+            style="@style/EditText"/>
+
+        <EditText
+            android:id="@+id/player_two_et"
+            android:hint="Player 2 Name"
+            style="@style/EditText"/>
+
+        </LinearLayout>
+
+    <!--Create 2 button radio group to determine player turn X or 0-->
+    <RadioGroup
+        android:id="@+id/choose_xo"
+        style="@style/RadioGroup"
+        android:onClick="chooseXO"
+        >
+
+        <!--Radio button for player turn X-->
+        <RadioButton
+            android:id="@+id/choose_x"
+            style="@style/RadioButton"
+            android:onClick="chooseXOrO"
+            android:text="Choose X" />
+
+        <!--Radio button for player turn O-->
+        <RadioButton
+            android:id="@+id/choose_o"
+            style="@style/RadioButton"
+            android:onClick="chooseXOrO"
+            android:text="Choose O" />
+
+    </RadioGroup>
+
+        <!--Create 2 button radio group to determine board game size-->
+        <RadioGroup
+            android:id="@+id/choose_board_size"
+            style="@style/RadioGroup"
+            android:onClick="chooseBoardSizeRadioGroup">
+
+            <!--Radio button for 3 by 3 board game-->
+            <RadioButton
+                android:id="@+id/three_board_game"
+                style="@style/RadioButton"
+                android:text="3 by 3"
+                android:onClick="chooseBoardGameRButtonClicked"/>
+
+            <!--Radio button for 5 by 5 board game-->
+            <RadioButton
+                android:id="@+id/five_board_game"
+                style="@style/RadioButton"
+                android:text="5 by 5"
+                android:onClick="chooseBoardGameRButtonClicked"/>
+
+        </RadioGroup>
+
+
+    <!--Play button to determine all options for game
+    and to proceed to game play-->
+    <Button
+        style="@style/PlayButton"
+        android:id="@+id/play_button"
+        android:text="play"
+        android:onClick="playGame"/>
+
+</LinearLayout>
